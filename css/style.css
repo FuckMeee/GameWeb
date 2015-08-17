@@ -1,0 +1,226 @@
+* {
+	margin: 0;
+	padding: 0;
+	ont-family: Helvetica,"STHeiti STXihei","Microsoft JhengHei","Microsoft YaHei",Tohoma,Arial;
+}
+
+ul {
+	display: block;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+/***header***/
+#header .headerPic {
+	width: 100%;
+	min-width: 1300px;
+	height: 110px;
+	margin: 0 auto;
+	background-image: url(../images/top.png);
+	background-size: 100% 110px;
+}
+
+#header .headerPic .name {
+	float: left;
+	color: #fff;
+	margin-left: 300px;
+	margin-top: 90px;
+}
+
+#header .headerPic .fun {
+	float: right;
+	margin-right: 300px;
+	margin-top: 10px;
+	font-size: 12px;
+}
+
+
+#header .headerPic .fun li {
+	display: inline-block;
+	height: 14px;
+	line-height: 14px;
+	margin-left: 5px;
+}
+
+#header .headerPic .fun li a span {
+	/*display: block;*/
+	color: #fff;
+	margin-left: 3px;
+	height: 14px;
+	line-height: 14px;
+}
+
+#header ul li {
+	display: inline-block;
+
+}
+
+#header .headerNav {
+	width: 100%;
+	min-width: 950px;
+	height: 50px;
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#027cc2,endColorStr=#001f32); /*IE 6 7 8*/ 
+    background: -ms-linear-gradient(top, #027cc2,  #001f32);        /* IE 10 */
+    background:-moz-linear-gradient(top,#027cc2,#001f32);/*火狐*/ 
+    background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#027cc2), to(#001f32));/*谷歌*/
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#027cc2), to(#001f32));      /* Safari 4-5, Chrome 1-9*/
+    background: -webkit-linear-gradient(top, #027cc2, #001f32);   /*Safari5.1 Chrome 10+*/
+    background: -o-linear-gradient(top, #027cc2, #001f32);  /*Opera 11.10+*/
+}
+
+#header .headerNav ul {
+	width: 950px;
+	margin: 0 auto;
+}
+
+#header .headerNav li {
+	width: 183px;
+	height: 50px;
+	line-height: 50px;
+	color: #fff;
+	font-size: 20px;
+	text-align: center;
+}
+
+#header .headerNav li a {
+	color: #fff;
+}
+
+/***main***/
+#main .content {
+	width: 100%;
+	min-width: 950px;
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#027cc2,endColorStr=#001f32); /*IE 6 7 8*/ 
+    background: -ms-linear-gradient(top, #027cc2,  #001f32);        /* IE 10 */
+    background:-moz-linear-gradient(top,#027cc2,#001f32);/*火狐*/ 
+    background:-webkit-gradient(linear, 0% 0%, 0% 35%,from(#027cc2), to(#001f32));/*谷歌*/
+    background: -webkit-gradient(linear, 0% 0%, 0% 35%, from(#027cc2), to(#001f32));      /* Safari 4-5, Chrome 1-9*/
+}
+
+#main .content .focusGallery {
+	width: 950px;
+	height: 320px;
+	margin: 0 auto;
+	border-left: 1px solid #00a0e9;
+	border-right: 1px solid #00a0e9;
+}
+
+#main .details {
+	width: 950px;
+	height: 720px;
+	margin: 0 auto;
+	border: 1px solid #00a0e9;
+
+}
+
+#main .details .detailsLeft {
+	width: 247px;
+	height: 100%;
+	float: left;
+}
+
+#main .details .detailsLeft .load {
+	width: 247px;
+	height: 210px;
+	color: #fff;
+	border-right: 1px solid #00a0e9;
+}
+
+#main .details .detailsLeft .load .load1 {
+	height: 99px;
+	background-image: url(../images/gamehell.png);
+	background-repeat: no-repeat;
+	text-align: center;
+	line-height: 45px;
+}
+
+#main .details .detailsLeft .load .load2 {
+	height: 55px;
+	background-image: url(../images/load.png);
+	background-repeat: no-repeat;
+	text-align: center;
+	line-height: 50px;
+}
+#main .details .detailsLeft .load .load3 {
+	height: 55px;
+	background-image: url(../images/load.png);
+	background-repeat: no-repeat;
+	text-align: center;
+	line-height: 50px;
+}
+
+#main .details .detailsLeft .safe {
+	width: 246px;
+	height: 489px;
+	color: #fff;
+	padding-top: 20px;
+	border-top: 1px solid #00a0e9;
+	border-right: 1px solid #00a0e9;
+}
+
+#main .details .detailsLeft .safe li{
+	margin: 0 auto;
+	margin-top: 20px;
+	height: 81px;
+	color: #fff;
+	width: 211px;
+}
+
+#main .details .detailsLeft .safe .safe1 {
+	background-image: url(../images/safe1.png);
+	background-repeat: no-repeat;
+	text-align: center;
+	line-height: 50px;
+	margin-top: 0;
+}
+
+#main .details .detailsLeft .safe .safe2 {
+	background-image: url(../images/safe2.png);
+	background-repeat: no-repeat;
+	text-align: center;
+	line-height: 50px;
+}
+
+#main .details .detailsLeft .safe .safe3 {
+	background-image: url(../images/safe3.png);
+	background-repeat: no-repeat;
+	text-align: center;
+	line-height: 50px;
+}
+
+#main .details .detailsLeft .safe .safe4 {
+	height: 136px;
+	background-image: url(../images/safe4.png);
+	background-repeat: no-repeat;
+	text-align: center;
+	line-height: 50px;
+	margin-top: 40px;
+}
+
+#main .details .detailsRight {
+	float: left;
+}
+
+#main .details .detailsRight .gamesPic {
+	width: 703px;
+	height: 170px;
+}
+
+#main .details .detailsRight .gamesPic li {
+	display: inline-block;
+	width: 234px;
+	text-align: center;
+	vertical-align: middle;
+	padding-top: 12px;
+}
+
+#main .details .detailsRight .gamesPic img {
+	width: 218px;
+	height: 146px;
+}
