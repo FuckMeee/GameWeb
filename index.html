@@ -6,7 +6,144 @@
 	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
 	<script type="text/javascript" src="js/fun.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	
+<style type="text/css">
+.blk_18 { overflow:hidden; zoom:1; font-size:9pt; width:753px; }
+.blk_18 .pcont { width:633px; float:left; overflow:hidden; padding-left:5px; }
+.blk_18 .ScrCont { width:32766px; zoom:1; margin-left:-5px; }
+.blk_18 #List1_1, .blk_18 #List2_1 { float:left; }
+.blk_18 .LeftBotton, .blk_18 .RightBotton { width:57px; height:88px; float:left; }
+.blk_18 .LeftBotton {background:url(./images/left.png) no-repeat ;background-position: 1px 0;}
+.blk_18 .RightBotton {background:url(./images/right.png) no-repeat;background-position: 0 0;}
+.blk_18 .LeftBotton:hover {}
+.blk_18 .RightBotton:hover {}
+.blk_18 .pl img { display:block; cursor:pointer; border:none; width: 89px; height: 88px;}
+.blk_18 .pl { width:89px; float:left; text-align:center; line-height:24px; }
+/*.blk_18 a.pl:hover { border:1px solid #5dacec; color:#5dacec; background:#fff; }*/
+</style>
+<script type="text/javascript">
 
+var Speed_1 = 10;
+var Space_1 = 20;
+var PageWidth_1 = 107 * 6;
+var interval_1 = 5000;
+var fill_1 = 0;
+var MoveLock_1 = false;
+var MoveTimeObj_1;
+var MoveWay_1="right";
+var Comp_1 = 0;
+var AutoPlayObj_1=null;
+function GetObj(objName){if(document.getElementById){return eval('document.getElementById("'+objName+'")')}else{return eval('document.all.'+objName)}}
+function AutoPlay_1(){clearInterval(AutoPlayObj_1);AutoPlayObj_1=setInterval('ISL_GoDown_1();ISL_StopDown_1();',interval_1)}
+function ISL_GoUp_1(){if(MoveLock_1)return;clearInterval(AutoPlayObj_1);MoveLock_1=true;MoveWay_1="left";MoveTimeObj_1=setInterval('ISL_ScrUp_1();',Speed_1);}
+function ISL_StopUp_1(){if(MoveWay_1 == "right"){return};clearInterval(MoveTimeObj_1);if((GetObj('ISL_Cont_1').scrollLeft-fill_1)%PageWidth_1!=0){Comp_1=fill_1-(GetObj('ISL_Cont_1').scrollLeft%PageWidth_1);CompScr_1()}else{MoveLock_1=false}
+AutoPlay_1()}
+function ISL_ScrUp_1(){if(GetObj('ISL_Cont_1').scrollLeft<=0){GetObj('ISL_Cont_1').scrollLeft=GetObj('ISL_Cont_1').scrollLeft+GetObj('List1_1').offsetWidth}
+GetObj('ISL_Cont_1').scrollLeft-=Space_1}
+function ISL_GoDown_1(){clearInterval(MoveTimeObj_1);if(MoveLock_1)return;clearInterval(AutoPlayObj_1);MoveLock_1=true;MoveWay_1="right";ISL_ScrDown_1();MoveTimeObj_1=setInterval('ISL_ScrDown_1()',Speed_1)}
+function ISL_StopDown_1(){if(MoveWay_1 == "left"){return};clearInterval(MoveTimeObj_1);if(GetObj('ISL_Cont_1').scrollLeft%PageWidth_1-(fill_1>=0?fill_1:fill_1+1)!=0){Comp_1=PageWidth_1-GetObj('ISL_Cont_1').scrollLeft%PageWidth_1+fill_1;CompScr_1()}else{MoveLock_1=false}
+AutoPlay_1()}
+function ISL_ScrDown_1(){if(GetObj('ISL_Cont_1').scrollLeft>=GetObj('List1_1').scrollWidth){GetObj('ISL_Cont_1').scrollLeft=GetObj('ISL_Cont_1').scrollLeft-GetObj('List1_1').scrollWidth}
+GetObj('ISL_Cont_1').scrollLeft+=Space_1}
+function CompScr_1(){if(Comp_1==0){MoveLock_1=false;return}
+var num,TempSpeed=Speed_1,TempSpace=Space_1;if(Math.abs(Comp_1)<PageWidth_1/2){TempSpace=Math.round(Math.abs(Comp_1/Space_1));if(TempSpace<1){TempSpace=1}}
+if(Comp_1<0){if(Comp_1<-TempSpace){Comp_1+=TempSpace;num=TempSpace}else{num=-Comp_1;Comp_1=0}
+GetObj('ISL_Cont_1').scrollLeft-=num;setTimeout('CompScr_1()',TempSpeed)}else{if(Comp_1>TempSpace){Comp_1-=TempSpace;num=TempSpace}else{num=Comp_1;Comp_1=0}
+GetObj('ISL_Cont_1').scrollLeft+=num;setTimeout('CompScr_1()',TempSpeed)}}
+function picrun_ini(){
+GetObj("List2_1").innerHTML=GetObj("List1_1").innerHTML;
+GetObj('ISL_Cont_1').scrollLeft=fill_1>=0?fill_1:GetObj('List1_1').scrollWidth-Math.abs(fill_1);
+GetObj("ISL_Cont_1").onmouseover=function(){clearInterval(AutoPlayObj_1)}
+GetObj("ISL_Cont_1").onmouseout=function(){AutoPlay_1()}
+AutoPlay_1();
+}
+
+
+
+
+
+//选择器
+function $a(id,tag){var re=(id&&typeof id!="string")?id:document.getElementById(id);if(!tag){return re;}else{return re.getElementsByTagName(tag);}}
+
+//焦点滚动图 点击移动 
+function movec()
+{
+	var o=$a("bd1lfimg","");
+	var oli=$a("bd1lfimg","dl");
+    var oliw=oli[0].offsetWidth; //每次移动的宽度
+	var ow=o.offsetWidth-2;
+	var dnow=0; //当前位置
+	var olf=oliw-(ow-oliw+10)/2;
+		o["scrollLeft"]=olf+(dnow*oliw);
+	var rqbd=$a("bd1lfsj","ul")[0];
+	var extime;
+
+	//for(var i=1;i<oli.length;i++){rqbd.innerHTML+="<li>"+i+"</li>";}
+	var rq=$a("bd1lfsj","li");
+	for(var i=0;i<rq.length;i++){reg(i);};
+	oli[dnow].className=rq[dnow].className="show";
+	var wwww=setInterval(uu,2000);
+
+	function reg(i){rq[i].onclick=function(){oli[dnow].className=rq[dnow].className="";dnow=i;oli[dnow].className=rq[dnow].className="show";mv();}}
+	function mv(){clearInterval(extime);clearInterval(wwww);extime=setInterval(bc,15);wwww=setInterval(uu,5000);}
+	function bc()
+	{
+		var ns=((dnow*oliw+olf)-o["scrollLeft"]);
+		var v=ns>0?Math.ceil(ns/10):Math.floor(ns/10);
+		o["scrollLeft"]+=v;if(v==0){clearInterval(extime);oli[dnow].className=rq[dnow].className="show";v=null;}
+	}
+	function uu()
+	{
+		if(dnow<oli.length-2)
+		{
+			oli[dnow].className=rq[dnow].className="";
+			dnow++;
+			oli[dnow].className=rq[dnow].className="show";
+		}
+		else{oli[dnow].className=rq[dnow].className="";dnow=0;oli[dnow].className=rq[dnow].className="show";}
+		mv();
+	}
+	o.onmouseover=function(){clearInterval(extime);clearInterval(wwww);}
+	o.onmouseout=function(){extime=setInterval(bc,15);wwww=setInterval(uu,5000);}
+}
+</script>
+
+
+<style type="text/css">
+#content{width:1000px;margin:0 auto;}
+h1,h2,h3{ font-family:"微软雅黑";color:#00659b;}
+h1,h2,h3,h4,h5,h6{ font-weight:bold;}
+#footer{padding-bottom:0;margin:0px auto 0;}
+/*********main css定义***********/
+.mb15 {margin-bottom: 0px;}
+#main{width: 100%; margin:0 auto; overflow:hidden;}
+
+
+
+/*********图片切换 css定义***********/
+.sub_box{width:1000px; height:300px; float:left; position:relative; overflow:hidden; background:url(http://trip.elong.com/trip/default/news/images/logo_gray.jpg) center center no-repeat; *background:url(http://trip.elong.com/trip/default/news/images/logo_gray.jpg) 220px 120px no-repeat;}
+.sub_box img{border:none; width:1000px; height:300px;}
+#bd1lfimg{position:relative; width:1000px; height:300px; overflow:hidden;}
+#bd1lfimg div{width:100000px; margin-left:-4px;}
+#bd1lfimg dl{width:1000px; height:300px; position:relative; overflow:hidden; float:left;}
+#bd1lfimg dt{width:1000px; height:300px; position:absolute; left:0px; top:0px;}
+#bd1lfimg dd{width:623px; height:80px; background:#000000; filter:alpha(Opacity=70); Opacity:0.7; position:absolute; left:0px; bottom:0px; padding:0 20px;}
+#bd1lfimg dd h2{height:25px; padding:8px 0 4px 0; line-height:25px; overflow:hidden;}
+#bd1lfimg dd h2 a{font-size:14px; font-weight:bold; color:#ffffff;}
+#bd1lfimg dd a{color:#ffffff; text-decoration:none;}
+#bd1lfimg dd a:hover{text-decoration:none; color:#cccccc;}
+#bd1lfimg dd tt{color:#dddddd; line-height:1.2em;}
+#bd1lfimg dd tt a:hover{text-decoration:underline;}
+
+.sub_nav{width:1000px; height:30px; bottom:0px; position:absolute; color:#999999; z-index:200;}
+.sub_no{height:30px; float:right;}
+.sub_no li{display:block; width:35px; height:30px; float:left; overflow:hidden; line-height:30px; vertical-align:middle; text-align:center; background:#001239; filter:alpha(Opacity=70); Opacity:0.7; font-family:Arial; font-size:11px; color:#999999; cursor:pointer;}
+.sub_no li.show{background:#c65501; color:#000000;width: 50px;}
+.sub_more{float:right; width:50px; height:25px; background:#000000; filter:alpha(Opacity=70); Opacity:0.7; color:#999999; text-align:center; line-height:25px;}
+.sub_more a{color:#999999;}
+.sub_more a:hover{color:#cccccc; text-decoration:none;}
+
+</style>
 </head>
 <body>
 	<div id="header">
@@ -35,29 +172,77 @@
 	<div id="main">
 		<div class="content">
 			<div class="focusGallery">
-				<div class="pic"></div>
-				<div class="words"></div>
+				<div class="pic">
+					<div id="content">
+	<div id="main">
+
+		<div class="sub_box">
+			<div id="p-select" class="sub_nav">
+				<div class="sub_no" id="bd1lfsj">
+					<ul>
+						<li class="show">1</li><li class="">2</li><li class="">3</li>
+					</ul>
+				</div>
+			</div>
+			<div id="bd1lfimg">
+				<div>
+					<dl class="show"></dl>
+					<dl class="">
+						<dt><a href="#" target="_blank"><img src="images/lunbo1.png"></a></dt>
+					</dl>
+					<dl class="">
+						<dt><a href="#" target="_blank"><img src="images/lunbo1.png"></a></dt>
+					</dl>
+					<dl class="">
+						<dt><a href="#" target="_blank"><img src="images/lunbo1.png"></a></dt>
+					</dl>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">movec();</script>
+
+	</div>
+
+	</div>
+				</div>
+				<div class="words">
+					<div class="area">
+						<marquee behavior=scroll>
+							游戏忠告：抵制不良游戏 拒绝盗版游戏 注意自我保护 慎防上当受骗 适度游戏益脑 沉迷游戏伤身 合理安排时间 享受健康生活！禁止任何利用本平台游戏进行赌博的行为，让我们共同净化游戏环境，一旦发现有违反用户协议的行为，我们将立即封杀账号！
+						</marquee>
+					</div>
+				</div>
 			</div>
 			<div class="details">
 				<div class="detailsLeft">
 					<div class="load">
 						<ul>
 							<li class="load1">
-								<div>游戏大厅</div>
-								<div>下载</div>
+								<a href="#">
+									<div>游戏大厅</div>
+									<div>下载</div>
+								</a>
 							</li>
 							<li class="load2">
-								极速版本
+								<a href=""><div>极速版本</div></a>
 							</li>
-							<li class="load3">完整版本</li>
+							<li class="load3"><a href=""><div>完整版本</div></a></li>
 						</ul>
 					</div>
 					<div class="safe">
 						<ul>
-							<li class="safe1"></li>
-							<li class="safe2"></li>
-							<li class="safe3"></li>
-							<li class="safe4"></li>
+							<li class="safe1">
+								<a href=""><div>防盗号秘籍</div></a>
+							</li>
+							<li class="safe2">
+								<a href=""><div>防沉迷系统</div></a>
+							</li>
+							<li class="safe3">
+								<a href=""><div>家长监护工程</div></a>
+							</li>
+							<li class="safe4">
+								<a href=""><div><p class="p1">客服热线</p><p class="p2">400-1257-5412</p></div></a>
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -70,42 +255,90 @@
 					<div class="other">
 						<div class="infoActivity">
 							<div class="gameInfo">
+								<div class="giTop">
+									<img src="images/gameinfo.png">
+									<span>游戏资讯</span>
+								</div>
 								<ul>
-									<li></li>
-									<li></li>
-									<li></li>
-									<li></li>
-									<li></li>
-									<li></li>
-									<li></li>
+									<li><a href="#"><span class="title">游戏7月档充值优惠</span><span class="date">2015-08-18</span></a></li>
+									<li><a href="#"><span class="title">临时维护公告</span><span class="date">2015-08-18</span></a></li>
+									<li><a href="#"><span class="title">机房线路调整公告</span><span class="date">2015-08-18</span></a></li>
+									<li><a href="#"><span class="title">临时维护公告</span><span class="date">2015-08-18</span></a></li>
+									<li><a href="#"><span class="title">请注意假冒官网的站点</span><span class="date">2015-08-18</span></a></li>
+									<li><a href="#"><span class="title">登录提示密码错误</span><span class="date">2015-08-18</span></a></li>
+									<li><a href="#"><span class="title">临时维护公告</span><span class="date">2015-08-18</span></a></li>
 								</ul>
 							</div>
 							<div class="newActivity">
+								<div class="naTop">
+									<img src="images/newacti.png">
+									<span>最新活动</span>
+								</div>
 								<ul>
+									<li></li>
+									<li></li>
 									<li></li>
 									<li></li>
 								</ul>
 							</div>
 						</div>
 						<div class="CommonProblem">
+							<div class="cpTop">
+								<img src="images/commprob.png">
+								<span>常见问题</span>
+							</div>
 							<ul>
-								<li></li>
-								<li></li>
-								<li></li>
-								<li></li>
-								<li></li>
-								<li></li>
-								<li></li>
-								<li></li>
-								<li></li>
+								<li><a href="#">如何在线充值购买欢乐豆</a></li>
+								<li><a href="#">游戏充值流程说明</a></li>
+								<li><a href="#">怎么找回银行密码</a></li>
+								<li><a href="#">怎么找回游戏密码</a></li>
+								<li><a href="#">怎么修改游戏密码</a></li>
+								<li><a href="#">怎么进入游戏</a></li>
+								<li><a href="#">怎么注册通行证</a></li>
+								<li><a href="#">游戏账号解绑</a></li>
+								<li><a href="#">游戏登录验证安全手机</a></li>
 							</ul>
 						</div>
 					</div>
-					<div class="smallPics"></div>
+					<div class="smallPics">
+						<div class="blk_18">
+							<a class="LeftBotton" onmousedown="ISL_GoUp_1()" onmouseup="ISL_StopUp_1()" onmouseout="ISL_StopUp_1()" href="javascript:void(0);" target="_self"></a>
+						  	<div class="pcont" id="ISL_Cont_1">
+						    	<div class="ScrCont">
+						      		<div id="List1_1">
+								        <a class="pl" href="#"><img src="images/bpic.png"/></a>
+								        <a class="pl" href="#"><img src="images/bpic.png"/></a>
+								        <a class="pl" href="#"><img src="images/bpic.png"/></a>
+								        <a class="pl" href="#"><img src="images/bpic.png"/></a>
+								        <a class="pl" href="#"><img src="images/bpic.png"/></a>
+								        <a class="pl" href="#"><img src="images/bpic.png"/></a>
+								        <a class="pl" href="#"><img src="images/bpic.png"/></a>
+								        <a class="pl" href="#"><img src="images/bpic.png"/></a>
+								        <a class="pl" href="#"><img src="images/bpic.png"/></a>
+						      		</div>
+						      		<div id="List2_1"></div>
+						    	</div>
+						  	</div>
+						  	<a class="RightBotton" onmousedown="ISL_GoDown_1()" onmouseup="ISL_StopDown_1()" onmouseout="ISL_StopDown_1()" href="javascript:void(0);" target="_self"></a>
+  						</div>
+						<div class="c"></div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div id="footer"></div>
+	<div id="footer">
+		<div class="one">
+			<ul>
+				<li><a href="#">联系我们</a></li><li><a href="#">关于我们</a></li><li><a href="#">服务条款</a></li><li><a href="#">设为首页</a></li><li><a href="#">收藏本站</a></li>
+			</ul>
+		</div>
+		<div class="two">
+			<img src="images/footer.png">
+		</div>
+		<div class="three">
+			<p>抵制不良游戏 拒绝盗版游戏 注意自我保护 慎防上当受骗 适度游戏益脑 沉迷游戏伤身 合理安排时间 享受健康生活</p>
+		</div>
+	</div>
 </body>
 </html>

@@ -1,7 +1,7 @@
 * {
 	margin: 0;
 	padding: 0;
-	ont-family: Helvetica,"STHeiti STXihei","Microsoft JhengHei","Microsoft YaHei",Tohoma,Arial;
+	font-family: "Microsoft YaHei", Tohoma, Arial, Helvetica,"STHeiti STXihei","Microsoft JhengHei";
 }
 
 ul {
@@ -29,8 +29,8 @@ a {
 #header .headerPic .name {
 	float: left;
 	color: #fff;
-	margin-left: 300px;
-	margin-top: 90px;
+	margin-left: 24%;
+	margin-top: 85px;
 }
 
 #header .headerPic .fun {
@@ -63,7 +63,7 @@ a {
 
 #header .headerNav {
 	width: 100%;
-	min-width: 950px;
+	min-width: 1000px;
 	height: 50px;
 	FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#027cc2,endColorStr=#001f32); /*IE 6 7 8*/ 
     background: -ms-linear-gradient(top, #027cc2,  #001f32);        /* IE 10 */
@@ -75,7 +75,7 @@ a {
 }
 
 #header .headerNav ul {
-	width: 950px;
+	width: 1000px;
 	margin: 0 auto;
 }
 
@@ -90,12 +90,16 @@ a {
 
 #header .headerNav li a {
 	color: #fff;
+	display: block;
+	width: 100%;
+	height: 100%;
+	font-family: "微软雅黑"；
 }
 
 /***main***/
 #main .content {
 	width: 100%;
-	min-width: 950px;
+	min-width: 1000px;
 	FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#027cc2,endColorStr=#001f32); /*IE 6 7 8*/ 
     background: -ms-linear-gradient(top, #027cc2,  #001f32);        /* IE 10 */
     background:-moz-linear-gradient(top,#027cc2,#001f32);/*火狐*/ 
@@ -104,15 +108,38 @@ a {
 }
 
 #main .content .focusGallery {
-	width: 950px;
+	width: 1000px;
 	height: 320px;
 	margin: 0 auto;
 	border-left: 1px solid #00a0e9;
 	border-right: 1px solid #00a0e9;
 }
 
+#main .content .focusGallery .words {
+	width: 1000px;
+	height: 20px;
+	background-image: url(../images/words.png);
+}
+
+#main .content .focusGallery .words .area{
+	width: 910px;
+	margin-left: 40px;
+	font-size: 12px;
+}
+
+#main .content .focusGallery .words .area marquee{
+	height: 20px;
+	line-height: 20px;
+	color: #dfcb36;
+}
+
+
+#main .content .focusGallery .pic {
+
+}
+
 #main .details {
-	width: 950px;
+	width: 1000px;
 	height: 720px;
 	margin: 0 auto;
 	border: 1px solid #00a0e9;
@@ -132,12 +159,26 @@ a {
 	border-right: 1px solid #00a0e9;
 }
 
+#main .details .detailsLeft .load div {
+	margin-left: 12px;
+}
+
+#main .details .detailsLeft .load a {
+	color: #fff;
+	font-size: 24px;
+}
+
 #main .details .detailsLeft .load .load1 {
 	height: 99px;
 	background-image: url(../images/gamehell.png);
 	background-repeat: no-repeat;
 	text-align: center;
-	line-height: 45px;
+	/*line-height: 45px;*/
+}
+
+#main .details .detailsLeft .load .load1 div {
+	height: 40px;
+	line-height: 60px;
 }
 
 #main .details .detailsLeft .load .load2 {
@@ -156,7 +197,7 @@ a {
 }
 
 #main .details .detailsLeft .safe {
-	width: 246px;
+	width: 247px;
 	height: 489px;
 	color: #fff;
 	padding-top: 20px;
@@ -170,28 +211,40 @@ a {
 	height: 81px;
 	color: #fff;
 	width: 211px;
+
+}
+
+#main .details .detailsLeft .safe a {
+	color: #fff;
+	font-size: 20px;
+
 }
 
 #main .details .detailsLeft .safe .safe1 {
 	background-image: url(../images/safe1.png);
 	background-repeat: no-repeat;
 	text-align: center;
-	line-height: 50px;
+	line-height: 81px;
 	margin-top: 0;
+
+}
+
+#main .details .detailsLeft .safe div {
+	margin-left: 30px;
 }
 
 #main .details .detailsLeft .safe .safe2 {
 	background-image: url(../images/safe2.png);
 	background-repeat: no-repeat;
 	text-align: center;
-	line-height: 50px;
+	line-height: 81px;
 }
 
 #main .details .detailsLeft .safe .safe3 {
 	background-image: url(../images/safe3.png);
 	background-repeat: no-repeat;
 	text-align: center;
-	line-height: 50px;
+	line-height: 81px;
 }
 
 #main .details .detailsLeft .safe .safe4 {
@@ -199,8 +252,23 @@ a {
 	background-image: url(../images/safe4.png);
 	background-repeat: no-repeat;
 	text-align: center;
-	line-height: 50px;
+	line-height: 81px;
 	margin-top: 40px;
+}
+
+#main .details .detailsLeft .safe .safe4 div {
+	margin-left: 0;
+}
+
+#main .details .detailsLeft .safe .safe4 div p{
+	width: 200px;
+	height: 60px;
+	font-size: 23px;
+}
+
+#main .details .detailsLeft .safe .safe4 div .p1{
+	width: 280px;
+	padding-top: 10px;
 }
 
 #main .details .detailsRight {
@@ -208,19 +276,175 @@ a {
 }
 
 #main .details .detailsRight .gamesPic {
-	width: 703px;
+	width: 753px;
 	height: 170px;
+	border-bottom: 1px solid #00a0e9;
 }
 
 #main .details .detailsRight .gamesPic li {
 	display: inline-block;
-	width: 234px;
+	width: 251px;
 	text-align: center;
 	vertical-align: middle;
-	padding-top: 12px;
+	padding-top: 10px;
 }
 
 #main .details .detailsRight .gamesPic img {
-	width: 218px;
-	height: 146px;
+	width: 238px;
+	height: 150px;
+}
+
+#main .details .detailsRight .other {
+	width: 753px;
+	height: 460px;
+}
+
+
+#main .details .detailsRight .other .infoActivity {
+	width: 585px;
+	height: 461px;
+	float: left;
+}
+
+#main .details .detailsRight .other .infoActivity .gameInfo{
+	width: 585px;
+	height: 310px;
+}
+
+#main .details .detailsRight .other .infoActivity .gameInfo img {
+	margin-left: 15px;
+	margin-top: 10px;
+	float: left;
+}
+
+#main .details .detailsRight .other .infoActivity .gameInfo .giTop {
+	height: 35px;
+	line-height: 40px;
+}
+
+#main .details .detailsRight .other .infoActivity .gameInfo .giTop span {
+	display: block;
+	margin-left: 50px;
+	font-size: 20px;
+	color: #fff;
+}
+
+#main .details .detailsRight .other .infoActivity .gameInfo ul li {
+	width: 585px;
+	height: 39px;
+	line-height: 39px;
+}
+
+#main .details .detailsRight .other .infoActivity .gameInfo ul li a{
+	color: #fff;
+	font-size: 12px;
+}
+
+#main .details .detailsRight .other .infoActivity .gameInfo ul li .title {
+	margin-left: 50px;
+}
+
+#main .details .detailsRight .other .infoActivity .gameInfo ul li .date {
+	float: right;
+	margin-right: 60px;
+}
+
+#main .details .detailsRight .other .infoActivity .newActivity {
+	width: 585px;
+	height: 151px;
+	background-image: url(../images/newactibg.png);
+	background-size: 585px 151px;
+}
+
+#main .details .detailsRight .other .newActivity img {
+	margin-left: 15px;
+	margin-top: 7px;
+	float: left;
+}
+
+#main .details .detailsRight .other .newActivity span {
+	display: block;
+	margin-left: 45px;
+	padding-top: 4px;
+	font-size: 20px;
+	color: #fff;
+}
+
+#main .details .detailsRight .other .CommonProblem {
+	width: 168px;
+	height: 461px;
+	float: left;
+	background-image: url(../images/cpbackground.png);
+	background-size: 168px 461px;
+}
+
+#main .details .detailsRight .other .CommonProblem img {
+	margin-left: 15px;
+	margin-top: 2px;
+	float: left;
+}
+
+#main .details .detailsRight .other .CommonProblem span {
+	display: block;
+	margin-left: 45px;
+	margin-top: 3px;
+	font-size: 20px;
+	color: #fff;
+}
+
+#main .details .detailsRight .other .CommonProblem ul {
+	display: block;
+	width: 100%;
+	height: 400px;
+}
+
+#main .details .detailsRight .other .CommonProblem li {
+	display: block;
+	width: 166px;
+	height: 46px;
+	line-height: 46px;
+	padding-left: 20px;
+	
+}
+
+#main .details .detailsRight .other .CommonProblem li a {
+	color: #fff;
+	font-size: 12px;
+}
+
+#main .details .detailsRight .smallPics {
+	width: 753px;
+	height: 90px;
+
+}
+
+
+/***footer***/
+#footer {
+	background-color: #000;
+	width: 100%;
+	height: 120px;
+}
+
+#footer .one {
+	text-align: center;
+	font-size: 12px;
+	padding-top: 20px;
+	padding-bottom: 5px;
+}
+
+#footer .one li {
+	display: inline-block;
+	padding: 0 8px;
+	border-right: 1px solid #fff;
+}
+
+#footer .one li a {
+	color: #fff;
+}
+
+#footer .three {
+	text-align: center;
+	color: #fff;
+	font-size: 14px;
 }
