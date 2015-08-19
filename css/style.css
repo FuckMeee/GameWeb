@@ -42,7 +42,7 @@ a {
 
 
 #header .headerPic .fun li {
-	display: inline-block;
+	float: left;
 	height: 14px;
 	line-height: 14px;
 	margin-left: 5px;
@@ -57,7 +57,7 @@ a {
 }
 
 #header ul li {
-	display: inline-block;
+	float: left;
 
 }
 
@@ -80,7 +80,7 @@ a {
 }
 
 #header .headerNav li {
-	width: 183px;
+	width: 200px;
 	height: 50px;
 	line-height: 50px;
 	color: #fff;
@@ -282,7 +282,7 @@ a {
 }
 
 #main .details .detailsRight .gamesPic li {
-	display: inline-block;
+	float: left;
 	width: 251px;
 	text-align: center;
 	vertical-align: middle;
@@ -309,17 +309,19 @@ a {
 #main .details .detailsRight .other .infoActivity .gameInfo{
 	width: 585px;
 	height: 310px;
+	background-image: url(../images/gameinfobg.png);
+	background-size: 585px 310px;
 }
 
 #main .details .detailsRight .other .infoActivity .gameInfo img {
 	margin-left: 15px;
-	margin-top: 10px;
+	margin-top: 3px;
 	float: left;
 }
 
 #main .details .detailsRight .other .infoActivity .gameInfo .giTop {
 	height: 35px;
-	line-height: 40px;
+	line-height: 30px;
 }
 
 #main .details .detailsRight .other .infoActivity .gameInfo .giTop span {
@@ -376,6 +378,7 @@ a {
 	float: left;
 	background-image: url(../images/cpbackground.png);
 	background-size: 168px 461px;
+	background-repeat: no-repeat;
 }
 
 #main .details .detailsRight .other .CommonProblem img {
@@ -433,14 +436,25 @@ a {
 	padding-bottom: 5px;
 }
 
+#footer .one ul {
+	display: block;
+	width: 335px;
+	height: 20px;
+	margin: 0 auto;
+}
+
 #footer .one li {
-	display: inline-block;
+	float: left;
 	padding: 0 8px;
 	border-right: 1px solid #fff;
 }
 
 #footer .one li a {
 	color: #fff;
+}
+
+#footer .two img {
+	width: 100%;
 }
 
 #footer .three {
