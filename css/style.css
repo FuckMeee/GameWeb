@@ -758,7 +758,7 @@ a {
 }
 
 
-.title {
+.fourGames .title {
 	width: 753px;
 	height: 210px;
 	border-bottom: 1px solid #00a0e9;
@@ -789,4 +789,117 @@ a {
 
 .games a {
 	color: #fff;
+
+}
+
+
+/***会员注册***/
+
+
+
+.register {
+	background-color: #003c5f;
+	padding-left: 80px;
+	padding-top: 25px;
+	padding-bottom: 50px;
+	color: #fff;
+}
+
+.register table input {
+	background-color: #0b71ae;
+	border: 1px solid #434343;
+	width: 380px;
+	height: 35px;
+	margin-left: 15px;
+	color: #fff;
+	padding: 0 10px;
+}
+
+.register .one {
+	font-size: 18px;
+	text-align: right;
+	width: 120px;
+}
+
+.register .one span {
+	color: red;
+	margin-right: 5px;
+}
+
+.register table tr {
+	height:1%;
+	margin-bottom: 20px;
+	display: block;
+}
+
+.register .alert {
+	display: block;
+	width: 300px;
+	height: 35px;
+	line-height: 35px;
+	text-align: center;
+	border: 1px solid #434343;
+	background-color: #2f96d1;
+	margin-left: 10px;
+}
+
+.register .alert img {
+	float: left;
+	margin-top: 7px;
+	margin-left: 15px;
+}
+
+.register .captchas {
+	width: 80px;
+	height: 40px;
+	float: left;
+	background-color: #fff;
+}
+
+.register td a {
+	display: block;
+	color: #fff;
+	font-size: 14px;
+	float: left;
+	height: 35px;
+	line-height: 35px;
+	margin-left: 10px;
+}
+
+.register .submit {
+	display: block;
+	width: 261px;
+	height: 81px;
+	border: none;
+	background-color: #003c5f;
+	background-image: url(../images/register.png);
+	margin-left: 200px;
+}
+
+#captchas {
+	width: 300px;
+}
+
+#agree {
+	width: auto;
+	height: auto;
+	margin-bottom: 50px;
+}
+
+/***账号充值***/
+.recharge {
+	background-color: #003c5f;
+
+	color: #fff;
+}
+
+.recharge .pay {
+	padding-left: 180px;
+	padding-top: 25px;
+	padding-bottom: 50px;
+	padding-right: 140px;
+}
+
+.recharge .way {
+	border-bottom: 2px solid #00a0e9;
 }

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="renderer" content="webkit|ie-comp|ie-stand">
+	<title>账号充值</title>
+	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="js/fun.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+
+<script language="javascript">
+  function agreee(){
+       if(document.getElementById('agree').checked)
+              document.getElementById('submit').disabled=false;
+    else
+        document.getElementById('submit').disabled='disabled';
+  }
+  </script>
+
+</head>
+<body>
+	<div id="header">
+		<div class="headerPic">
+			<div class="name">
+				<span>993休闲游戏大厅</span>
+			</div>
+			<div class="fun">
+				<ul>
+					<li><a href="#"><img src="images/home.png"><span>会员登录</span></a></li>
+					<li><a href="#"><img src="images/data.png"><span>免费注册</span></a></li>
+					<li><a href="#"><img src="images/smallcomments.png"><span>新手帮助</span></a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="headerNav">
+			<ul>
+				<li><a href="#">网站首页</a></li>
+				<li><a href="#">游戏介绍</a></li>
+				<li><a href="#">账号充值</a></li>
+				<li><a href="#">会员注册</a></li>
+				<li><a href="#">帮助中心</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="main">
+		<div class="content">
+			<div class="details">
+				<div class="recharge">
+					<div class="form">
+						<form action="" method="post">
+							<div class="way">
+								<div class="pay">
+									<span>充值方式: </span>
+									<p>游戏点卡支付</p>
+									<input type="radio">腾讯Q币卡
+									<input type="radio">骏网一卡通
+									<input type="radio">盛大游戏卡
+									<input type="radio">巨人/征途卡
+									<input type="radio">5173充值卡
+									<input type="radio">完美一卡通
+									<input type="radio">网易一卡通
+									<input type="radio">搜狐一卡通
+									<input type="radio">久游一卡通
+
+									<p>充值卡支付</p>
+									<input type="radio">神州卡充值
+									<input type="radio">联通卡充值
+									<input type="radio">电信卡充值
+
+									<p>网银支付</p>
+									<input type="radio">招商银行
+									<input type="radio">中国工商银行
+									<input type="radio">中国建设银行
+									<input type="radio">上海浦东发展银行
+									<input type="radio">中国农业银行
+									<input type="radio">中国民生银行
+									<input type="radio">深圳发展银行
+									<input type="radio">兴业银行
+									<input type="radio">中国交通银行
+									<input type="radio">中国光大银行
+									<input type="radio">广州银联
+									<input type="radio">南京银行
+									<input type="radio">中信银行
+									<input type="radio">中国银行
+									<input type="radio">中国邮政
+									<input type="radio">东亚银行
+									<input type="radio">渤海银行
+									<input type="radio">平安银行
+								</div>
+							</div>
+							<div class="specific">
+								<table>
+									<tr>
+										<td>账号类型</td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>充值账号</td>
+										<td><input type="text"></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>确认账号</td>
+										<td><input type="text"></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>充值类型</td>
+										<td><input type="radio">尊盟币<input type="radio">蓝钻会员(有效期一个月)</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>充值金额</td>
+										<td><select>
+											<option value="">10</option>
+											<option value="">20</option>
+											<option value="">30</option>
+											<option value="">50</option>
+											<option value="">100</option>
+										</select></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>验证码</td>
+										<td><input type="text" name="captchas" id="captchas"></td>
+									<td><div class="captchas"></div><a href="#">看不清，换一张</a></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td><label></label><input type="checkbox" name="ragree" id="ragree" onclick="agreee()">已阅读并同意《关于充值的特别提示和约定》</td>
+										<td></td>
+									</tr>
+								</table>
+							</div>
+							<input type="submit" name="submit" id="submit" class="submit" disabled="disabled" value=" ">
+
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="one">
+			<ul>
+				<li><a href="#">联系我们</a></li><li><a href="#">关于我们</a></li><li><a href="#">服务条款</a></li><li><a href="#">设为首页</a></li><li><a href="#">收藏本站</a></li>
+			</ul>
+		</div>
+		<div class="two">
+			<img src="images/footer.png">
+		</div>
+		<div class="three">
+			<p>抵制不良游戏 拒绝盗版游戏 注意自我保护 慎防上当受骗 适度游戏益脑 沉迷游戏伤身 合理安排时间 享受健康生活</p>
+		</div>
+	</div>
+</body>
+</html>
