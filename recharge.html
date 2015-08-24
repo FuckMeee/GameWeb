@@ -11,11 +11,13 @@
 
 
 <script language="javascript">
-  function agreee(){
-       if(document.getElementById('agree').checked)
-              document.getElementById('submit').disabled=false;
-    else
-        document.getElementById('submit').disabled='disabled';
+  	function agreee(){
+        if(document.getElementById('ragree').checked) {
+       		document.getElementById('submit').disabled='disabled';
+       } else {
+       		document.getElementById('submit').disabled=false;
+       }
+        
   }
   </script>
 
@@ -36,11 +38,11 @@
 		</div>
 		<div class="headerNav">
 			<ul>
-				<li><a href="#">网站首页</a></li>
-				<li><a href="#">游戏介绍</a></li>
-				<li><a href="#">账号充值</a></li>
-				<li><a href="#">会员注册</a></li>
-				<li><a href="#">帮助中心</a></li>
+				<li><a href="index.html">网站首页</a></li>
+				<li><a href="games.html">游戏介绍</a></li>
+				<li><a href="recharge.html">账号充值</a></li>
+				<li><a href="register.html">会员注册</a></li>
+				<li><a href="helpCenter.html">帮助中心</a></li>
 			</ul>
 		</div>
 	</div>
@@ -52,92 +54,129 @@
 						<form action="" method="post">
 							<div class="way">
 								<div class="pay">
-									<span>充值方式: </span>
+									<span>充值方式 : </span>
 									<p>游戏点卡支付</p>
-									<input type="radio">腾讯Q币卡
-									<input type="radio">骏网一卡通
-									<input type="radio">盛大游戏卡
-									<input type="radio">巨人/征途卡
-									<input type="radio">5173充值卡
-									<input type="radio">完美一卡通
-									<input type="radio">网易一卡通
-									<input type="radio">搜狐一卡通
-									<input type="radio">久游一卡通
+									<input type="radio" id="tx" name="yxdk" checked="checked" class="yxdk">
+									<label name="tx" class="label1 check" for="tx">腾讯Q币卡</label>
+									<input type="radio" id="jw" name="yxdk" class="yxdk">
+									<label name="jw" class="label1" for="tx">骏网一卡通</label>
+									<input type="radio" id="sd" name="yxdk" class="yxdk">
+									<label name="sd" class="label1" for="tx">盛大游戏卡</label>
+									<input type="radio" id="jr" name="yxdk" class="yxdk">
+									<label name="jr" class="label1" for="tx">巨人/征途卡</label>
+									<input type="radio" id="5173" name="yxdk" class="yxdk">
+									<label name="5173" class="label1" for="tx">5173充值卡</label>
+									<input type="radio" id="wm" name="yxdk" class="yxdk">
+									<label name="wm" class="label1" for="tx">完美一卡通</label>
+									<input type="radio" id="wy" name="yxdk" class="yxdk">
+									<label name="wy" class="label1" for="tx">网易一卡通</label>
+									<input type="radio" id="sh" name="yxdk" class="yxdk">
+									<label name="sh" class="label1" for="tx">搜狐一卡通</label>
+									<input type="radio" id="jy" name="yxdk" class="yxdk">
+									<label name="jy" class="label1" for="tx">久游一卡通</label>
 
 									<p>充值卡支付</p>
-									<input type="radio">神州卡充值
-									<input type="radio">联通卡充值
-									<input type="radio">电信卡充值
+									<input type="radio" id="sz" name="czk" checked="checked" class="czk">
+									<label name="sz" class="label2 check" for="tx">神州卡充值</label>
+									<input type="radio" id="lt" name="czk" class="czk">
+									<label name="lt" class="label2" for="tx">联通卡充值</label>
+									<input type="radio" id="dx" name="czk" class="czk">
+									<label name="dx" class="label2" for="tx">电信卡充值</label>
 
 									<p>网银支付</p>
-									<input type="radio">招商银行
-									<input type="radio">中国工商银行
-									<input type="radio">中国建设银行
-									<input type="radio">上海浦东发展银行
-									<input type="radio">中国农业银行
-									<input type="radio">中国民生银行
-									<input type="radio">深圳发展银行
-									<input type="radio">兴业银行
-									<input type="radio">中国交通银行
-									<input type="radio">中国光大银行
-									<input type="radio">广州银联
-									<input type="radio">南京银行
-									<input type="radio">中信银行
-									<input type="radio">中国银行
-									<input type="radio">中国邮政
-									<input type="radio">东亚银行
-									<input type="radio">渤海银行
-									<input type="radio">平安银行
+									<input type="radio" id="zs" name="wyzf" checked="checked" class="wyzf">
+									<label name="zs" class="label3 check" for="tx">招商银行</label>
+									<input type="radio" id="zggs" name="wyzf" class="wyzf">
+									<label name="zggs" class="label3" for="tx">中国工商银行</label>
+									<input type="radio" id="zgjs" name="wyzf" class="wyzf">
+									<label name="zgjs" class="label3" for="tx">中国建设银行</label>
+									<input type="radio" id="shpdfz" name="wyzf" class="wyzf">
+									<label name="shpdfz" class="label3" for="tx">上海浦东发展银行</label>
+									<input type="radio" id="zgny" name="wyzf" class="wyzf">
+									<label name="zgny" class="label3" for="tx">中国农业银行</label>
+									<input type="radio" id="zgms" name="wyzf" class="wyzf">
+									<label name="zgms" class="label3" for="tx">中国民生银行</label>
+									<input type="radio" id="szfz" name="wyzf" class="wyzf">
+									<label name="szfz" class="label3" for="tx">深圳发展银行</label>
+									<input type="radio" id="xy" name="wyzf" class="wyzf">
+									<label name="xy" class="label3" for="tx">兴业银行</label>
+									<input type="radio" id="zgjt" name="wyzf" class="wyzf">
+									<label name="zgjt" class="label3" for="tx">中国交通银行</label>
+									<input type="radio" id="zggd" name="wyzf" class="wyzf">
+									<label name="zggd" class="label3" for="tx">中国光大银行</label>
+									<input type="radio" id="gzyl" name="wyzf" class="wyzf">
+									<label name="gzyl" class="label3" for="tx">广州银联</label>
+									<input type="radio" id="nj" name="wyzf" class="wyzf">
+									<label name="nj" class="label3" for="tx">南京银行</label>
+									<input type="radio" id="zx" name="wyzf" class="wyzf">
+									<label name="zx" class="label3" for="tx">中信银行</label>
+									<input type="radio" id="zg" name="wyzf" class="wyzf">
+									<label name="zg" class="label3" for="tx">中国银行</label>
+									<input type="radio" id="zgyz" name="wyzf" class="wyzf">
+									<label name="zgyz" class="label3" for="tx">中国邮政</label>
+									<input type="radio" id="dy" name="wyzf" class="wyzf">
+									<label name="dy" class="label3" for="tx">东亚银行</label>
+									<input type="radio" id="bh" name="wyzf" class="wyzf">
+									<label name="bh" class="label3" for="tx">渤海银行</label>
+									<input type="radio" id="pa" name="wyzf" class="wyzf">
+									<label name="pa" class="label3" for="tx">平安银行</label>
 								</div>
 							</div>
 							<div class="specific">
 								<table>
 									<tr>
-										<td>账号类型</td>
-										<td></td>
-										<td></td>
-									</tr>
-									<tr>
-										<td>充值账号</td>
-										<td><input type="text"></td>
+										<td class="sone">账号类型 :</td>
+										<td class="stwo"></td>
 										<td></td>
 									</tr>
 									<tr>
-										<td>确认账号</td>
-										<td><input type="text"></td>
+										<td class="sone">充值账号 :</td>
+										<td class="stwo"><input type="text"></td>
 										<td></td>
 									</tr>
 									<tr>
-										<td>充值类型</td>
-										<td><input type="radio">尊盟币<input type="radio">蓝钻会员(有效期一个月)</td>
+										<td class="sone">确认账号 :</td>
+										<td class="stwo"><input type="text"></td>
 										<td></td>
 									</tr>
 									<tr>
-										<td>充值金额</td>
+										<td class="sone">充值类型 :</td>
+										<td class="stwo"><input type="radio" id="zmb" name="type" checked="checked" class="type">
+										<label name="zmb" class="label4 check short" for="tx">尊盟币</label><input type="radio" id="lzhy" name="type" class="type">
+										<label name="lzhy" class="label4 long" for="tx">蓝钻会员(有效期一个月)</label></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td class="sone">充值金额 :</td>
 										<td><select>
-											<option value="">10</option>
-											<option value="">20</option>
-											<option value="">30</option>
-											<option value="">50</option>
-											<option value="">100</option>
+											<option value="10">10RMB</option>
+											<option value="20">20RMB</option>
+											<option value="30">30RMB</option>
+											<option value="50">50RMB</option>
+											<option value="100">100RMB</option>
 										</select></td>
-										<td></td>
+										<td class="sthree">(10RMB=1000尊盟币=100000欢乐豆)</td>
 									</tr>
 									<tr>
-										<td>验证码</td>
-										<td><input type="text" name="captchas" id="captchas"></td>
-									<td><div class="captchas"></div><a href="#">看不清，换一张</a></td>
+										<td class="sone">验证码 :</td>
+										<td class="stwo"><input type="text" name="captchas" id="captchas"></td>
+									<td><div class="captchas"></div><a href="#" class="captchasword">看不清，换一张</a></td>
 									</tr>
 									<tr>
 										<td></td>
-										<td><label></label><input type="checkbox" name="ragree" id="ragree" onclick="agreee()">已阅读并同意《关于充值的特别提示和约定》</td>
+										<td class="stwo"><input type="checkbox" name="ragree" id="ragree" class="ragree" value="agree"><span name="ragree" class="span1" onclick="agreee()">已阅读并同意《关于充值的特别提示和约定》</span></td>
 										<td></td>
 									</tr>
 								</table>
+								<input type="submit" name="submit" id="submit" class="submit" disabled="disabled" value="下一步">
+								<p>虚拟货币名称 ：尊盟币</p>
+								<p>充值比例 ：1元=100尊盟币</p>
+								<p>游戏币名称 ：欢乐豆</p>
+								<p>兑换比例 ：1尊盟币=100欢乐豆</p>
+								<span><p>我公司郑重承诺：虚拟货币不能兑换成人民币以及任何现实中的其他国家货币，发现违法兑换的行为，我公司将进行严厉打击，并上报有关部门。</p></span>
 							</div>
-							<input type="submit" name="submit" id="submit" class="submit" disabled="disabled" value=" ">
-
 						</form>
+
 					</div>
 				</div>
 			</div>

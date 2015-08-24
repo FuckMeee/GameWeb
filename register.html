@@ -86,7 +86,7 @@ $(document).ready(function(e) {
 </script>
 <script language="javascript">
   function agreee(){
-       if(document.getElementById('agree').checked)
+       if(document.getElementById('ragree').checked)
               document.getElementById('submit').disabled=false;
     else
         document.getElementById('submit').disabled='disabled';
@@ -110,11 +110,11 @@ $(document).ready(function(e) {
 		</div>
 		<div class="headerNav">
 			<ul>
-				<li><a href="#">网站首页</a></li>
-				<li><a href="#">游戏介绍</a></li>
-				<li><a href="#">账号充值</a></li>
-				<li><a href="#">会员注册</a></li>
-				<li><a href="#">帮助中心</a></li>
+				<li><a href="index.html">网站首页</a></li>
+				<li><a href="games.html">游戏介绍</a></li>
+				<li><a href="recharge.html">账号充值</a></li>
+				<li><a href="register.html">会员注册</a></li>
+				<li><a href="helpCenter.html">帮助中心</a></li>
 			</ul>
 		</div>
 	</div>
@@ -215,12 +215,12 @@ $(document).ready(function(e) {
 
 								<tr>
 									<td class="one"><span>* </span>验证码 :</td>
-									<td><input type="text" name="captchas" id="captchas"></td>
+									<td><input type="text" name="captchas" id="regcaptchas"></td>
 									<td><div class="captchas"></div><a href="#">看不清，换一张</a></td>
 								</tr>
 								<tr class="agree">
 									<td class="one"></td>
-									<td><label></label><input type="checkbox" name="agree" id="agree" onclick="agreee()">我接受993《用户协议》</td>
+									<td><label></label><input type="checkbox" name="ragree" id="ragree" class="ragree" value="agree"><span name="ragree" class="span1" onclick="agreee()" >我接受993《用户协议》</span></td>
 									<td></td>
 								</tr>
 							</table>

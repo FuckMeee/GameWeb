@@ -283,6 +283,8 @@ a {
 	border-left: 1px solid #00a0e9;
 }
 
+#main .details .detailsRight .title
+
 #main .details .detailsRight .gamesPic {
 	width: 753px;
 	height: 170px;
@@ -686,8 +688,8 @@ a {
 }
 
 .antiAddiction .aamid p {
-	text-indent:2em
-
+	text-indent: 2em;
+	line-height: 26px;
 }
 
 .antiAddiction .aabottom {
@@ -697,9 +699,8 @@ a {
 	padding-bottom: 50px;
 
 }
-.antiAddiction .aabottom h3 {
+.antiAddiction .aabottom h4 {
 	margin-bottom: 20px;
-
 	margin-top: 20px;
 }
 
@@ -722,7 +723,8 @@ a {
 }
 
 .noBurglar .nbbottom span {
-	color: #1aaff1;
+	color: #61ceff;
+	font-size: 18px;
 }
 
 .noBurglar .nbbottom .common {
@@ -732,8 +734,14 @@ a {
 	border: 1px solid #00a0e9;
 }
 
+.noBurglar .nbbottom h4 {
+	margin-bottom: 15px;
+}
+
 .noBurglar .nbbottom p {
 	text-indent: 2em;
+	line-height: 26px;
+	margin-bottom: 15px;
 }
 
 /***游戏介绍***/
@@ -758,11 +766,26 @@ a {
 }
 
 
-.fourGames .title {
+.game .detailsRight .title {
 	width: 753px;
-	height: 210px;
+	height: 195px;
 	border-bottom: 1px solid #00a0e9;
+	color: #fff;
+}
+
+.detailsRight .title h3 {
+	display: block;
 	text-align: center;
+	width: 100px;
+	margin: 15px auto;
+}
+
+.detailsRight .title p {
+	display: block;
+	width: 700px;
+	margin: 0 auto;
+	line-height: 32px;
+	text-indent: 2em;
 }
 
 .games {
@@ -876,7 +899,7 @@ a {
 	margin-left: 200px;
 }
 
-#captchas {
+#regcaptchas {
 	width: 300px;
 }
 
@@ -889,17 +912,237 @@ a {
 /***账号充值***/
 .recharge {
 	background-color: #003c5f;
-
+	font-size: 14px;
 	color: #fff;
 }
 
 .recharge .pay {
-	padding-left: 180px;
-	padding-top: 25px;
+	padding-left: 140px;
+	padding-top: 75px;
 	padding-bottom: 50px;
-	padding-right: 140px;
+	padding-right: 60px;
 }
 
 .recharge .way {
 	border-bottom: 2px solid #00a0e9;
+}
+
+.recharge .way .pay span {
+	display: block;
+	margin-bottom: 10px;
+	margin-left: -8px;
+}
+
+.recharge .way .pay p {
+	padding-left: 8px;
+	display: block;
+	width: 96px;
+	height: 24px;
+	line-height: 24px;
+	background-image: url(../images/pane.png);
+	margin-bottom: 5px;
+	margin-left: -8px;
+}
+
+.recharge input[type = "radio"] {
+	margin: 3px 3px 0px 5px;
+	display: none;
+}
+
+.recharge label {
+	display: inline-block;
+	padding-left: 15px;
+	cursor: pointer;
+	background: url(../images/circle.png) no-repeat left center;
+	background-size: 11px 11px;
+	height: 20px;
+	line-height: 20px;
+	width: 120px;
+	margin-bottom: 8px;
+}
+.recharge label.check {
+	padding-left: 15px;
+	cursor: pointer;
+	background: url(../images/circle_dot.png) no-repeat left center;
+	background-size: 11px 11px;
+}
+
+.recharge .specific {
+	padding-left: 140px;
+	padding-top: 75px;
+	padding-bottom: 50px;
+
+}
+
+.recharge .specific .sone {
+	display: block;
+	text-align: right;
+	width: 65px;
+	margin-right: 15px;
+	margin-bottom: 15px;
+}
+
+.recharge .specific input,select {
+	background-color: #0b71ae;
+	border: 1px solid #434343;
+}
+
+.recharge .specific input {
+	width: 150px;
+}
+
+.recharge .specific .sthree {
+	color: #ffd308;
+}
+
+.recharge .specific .captchas {
+	width: 60px;
+	height: 30px;
+	float: left;
+	background-color: #fff;
+}
+
+.recharge .specific .captchasword {
+	display: block;
+	color: #fff;
+	font-size: 14px;
+	float: left;
+	height: 35px;
+	line-height: 35px;
+	margin-left: 10px;
+}
+
+.recharge .specific p {
+	margin-bottom: 10px;
+}
+
+.recharge .specific span p {
+	margin-top: 80px;
+	margin-left: -80px;
+	margin-bottom: 10px;
+
+}
+
+.recharge .short {
+	width: 45px;
+}
+
+.recharge .long {
+	width: 180px;
+}
+
+.ragree {
+	display: none;
+}
+
+.span1 {
+	display: inline-block;
+	padding-left: 15px;
+	cursor: pointer;
+	background: url(../images/square.png) no-repeat left center;
+	background-size: 11px 11px;
+	height: 20px;
+	line-height: 20px;
+	width: 320px;
+	margin-bottom: 8px;
+	margin-top: 30px;
+}
+.span1.check {
+	padding-left: 15px;
+	cursor: pointer;
+	background: url(../images/square_dot.png) no-repeat left center;
+	background-size: 11px 11px;
+}
+
+.recharge .submit {
+	display: block;
+	width: 101px !important;
+	height: 28px !important;
+	border: none !important;
+	background-color: #003c5f !important;
+	background-image: url(../images/butter.png);
+	margin-left: 200px;
+	margin-bottom: 45px;
+	color: #fff;
+	font-size: 18px;
+	margin-top: 20px;
+}
+
+.recharge .stwo {
+	margin-bottom: 15px;
+}
+
+
+/***游戏下载***/
+.speed {
+	width: 753px;
+	height: 360px;
+	background-color: #003c5f;
+}
+
+.speed .stop {
+	width: 738px;
+	height: 50px;
+	color: #fff;
+	font-size: 22px;
+	line-height: 50px;
+	padding-left: 15px;
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#ff0d5d8a,endColorStr=#ff38a6e6); /*IE 6 7 8*/ 
+    background: -ms-linear-gradient(top, #0d5d8a,  #38a6e6);        /* IE 10 */
+    background:-moz-linear-gradient(top,#0d5d8a,#38a6e6);/*火狐*/ 
+    background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#0d5d8a), to(#38a6e6));/*谷歌*/
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#0d5d8a), to(#38a6e6));      /* Safari 4-5, Chrome 1-9*/
+}
+
+.speed .sbleft {
+	float: left;
+	margin-left: 15px;
+
+}
+
+.speed .sbleft p {
+	color: #fff;
+	font-size: 18px;
+	margin-top: 10px;
+}
+
+.speed .sbright {
+	margin-top: 95px;
+	margin-left: 350px;
+}
+
+.complete {
+	width: 753px;
+	height: 360px;
+	background-color: #003c5f;
+}
+
+.complete .ctop {
+	width: 738px;
+	height: 50px;
+	color: #fff;
+	font-size: 22px;
+	line-height: 50px;
+	padding-left: 15px;
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#ff0d5d8a,endColorStr=#ff38a6e6); /*IE 6 7 8*/ 
+    background: -ms-linear-gradient(top, #0d5d8a,  #38a6e6);        /* IE 10 */
+    background:-moz-linear-gradient(top,#0d5d8a,#38a6e6);/*火狐*/ 
+    background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#0d5d8a), to(#38a6e6));/*谷歌*/
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#0d5d8a), to(#38a6e6));      /* Safari 4-5, Chrome 1-9*/
+}
+
+.complete .cbleft {
+	float: left;
+	margin-left: 15px;
+}
+
+.complete .cbleft p {
+	color: #fff;
+	font-size: 18px;
+	margin-top: 10px;
+}
+
+.complete .cbright {
+	margin-top: 95px;
+	margin-left: 350px;
 }
