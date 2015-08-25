@@ -16,6 +16,9 @@ a {
 	text-decoration: none;
 }
 
+img {
+	border: none;
+}
 .h {
 	height: 720px;
 }
@@ -124,7 +127,7 @@ a {
 
 #main .content .focusGallery .words {
 	width: 1001px;
-	height: 20px;
+	height: 22px;
 	background-image: url(../images/words.png);
 }
 
@@ -281,6 +284,7 @@ a {
 #main .details .detailsRight {
 	float: left;
 	border-left: 1px solid #00a0e9;
+	background-color: #003c5f;
 }
 
 #main .details .detailsRight .title
@@ -297,6 +301,7 @@ a {
 	text-align: center;
 	vertical-align: middle;
 	padding-top: 10px;
+	padding-bottom: 7px;
 }
 
 #main .details .detailsRight .gamesPic img {
@@ -311,27 +316,34 @@ a {
 
 
 #main .details .detailsRight .other .infoActivity {
-	width: 585px;
+	width: 584px;
 	height: 461px;
 	float: left;
+	border-right: 1px solid #00a0e9;
 }
 
 #main .details .detailsRight .other .infoActivity .gameInfo{
 	width: 585px;
 	height: 310px;
-	background-image: url(../images/gameinfobg.png);
+/*	background-image: url(../images/gameinfobg.png);*/
 	background-size: 585px 310px;
 }
 
 #main .details .detailsRight .other .infoActivity .gameInfo .giTop img {
 	margin-left: 15px;
-	margin-top: 3px;
+	margin-top: 5px;
 	float: left;
 }
 
 #main .details .detailsRight .other .infoActivity .gameInfo .giTop {
 	height: 35px;
-	line-height: 30px;
+	line-height: 35px;
+	width: 584px;
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#ff0d5d8a,endColorStr=#ff38a6e6); /*IE 6 7 8*/ 
+    background: -ms-linear-gradient(top, #0d5d8a,  #38a6e6);        /* IE 10 */
+    background:-moz-linear-gradient(top,#0d5d8a,#38a6e6);/*火狐*/ 
+    background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#0d5d8a), to(#38a6e6));/*谷歌*/
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#0d5d8a), to(#38a6e6));      /* Safari 4-5, Chrome 1-9*/
 }
 
 #main .details .detailsRight .other .infoActivity .gameInfo .giTop span {
@@ -369,12 +381,20 @@ a {
 #main .details .detailsRight .other .infoActivity .newActivity {
 	width: 585px;
 	height: 151px;
-	background-image: url(../images/newactibg.png);
+/*	background-image: url(../images/newactibg.png);*/
 	background-size: 585px 151px;
 }
 
 #main .details .detailsRight .other .newActivity .naTop {
+	width: 584px;
 	margin-bottom: 30px;
+	height: 35px;
+	line-height: 35px;
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#ff0d5d8a,endColorStr=#ff38a6e6); /*IE 6 7 8*/ 
+    background: -ms-linear-gradient(top, #0d5d8a,  #38a6e6);        /* IE 10 */
+    background:-moz-linear-gradient(top,#0d5d8a,#38a6e6);/*火狐*/ 
+    background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#0d5d8a), to(#38a6e6));/*谷歌*/
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#0d5d8a), to(#38a6e6));      /* Safari 4-5, Chrome 1-9*/
 }
 
 #main .details .detailsRight .other .newActivity .naTop img {
@@ -386,7 +406,6 @@ a {
 #main .details .detailsRight .other .newActivity .naTop span {
 	display: block;
 	margin-left: 45px;
-	padding-top: 4px;
 	font-size: 20px;
 	color: #fff;
 }
@@ -419,9 +438,20 @@ a {
 	width: 168px;
 	height: 461px;
 	float: left;
-	background-image: url(../images/cpbackground.png);
+/*	background-image: url(../images/cpbackground.png);*/
 	background-size: 168px 461px;
 	background-repeat: no-repeat;
+}
+
+#main .details .detailsRight .other .CommonProblem .cpTop {
+	width: 168px;
+	height: 35px;
+	line-height: 35px;
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#ff0d5d8a,endColorStr=#ff38a6e6); /*IE 6 7 8*/ 
+    background: -ms-linear-gradient(top, #0d5d8a,  #38a6e6);        /* IE 10 */
+    background:-moz-linear-gradient(top,#0d5d8a,#38a6e6);/*火狐*/ 
+    background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#0d5d8a), to(#38a6e6));/*谷歌*/
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#0d5d8a), to(#38a6e6));      /* Safari 4-5, Chrome 1-9*/
 }
 
 #main .details .detailsRight .other .CommonProblem ul li img {
@@ -431,14 +461,14 @@ a {
 
 #main .details .detailsRight .other .CommonProblem .cpTop img {
 	margin-left: 15px;
-	margin-top: 2px;
+	margin-top: 5px;
 	float: left;
 }
 
 #main .details .detailsRight .other .CommonProblem span {
 	display: block;
 	margin-left: 45px;
-	margin-top: 3px;
+/*	margin-top: 3px;*/
 	font-size: 20px;
 	color: #fff;
 }
@@ -732,6 +762,7 @@ a {
 	margin-top: 10px;
 	margin-bottom: 25px;
 	border: 1px solid #00a0e9;
+	background-color: #003c5f;
 }
 
 .noBurglar .nbbottom h4 {
@@ -747,17 +778,21 @@ a {
 /***游戏介绍***/
 .fourGames {
 	width: 1001px;
-	height: 170px;
+	height: 159px;
 	margin: 0 auto;
 	border: 1px solid #00a0e9;
 }
 
 .fourGames li {
 	float: left;
-	width: 250px;
+	width: 248px;
 	text-align: center;
 	vertical-align: middle;
-	padding-top: 10px;
+	padding-top: 5px;
+}
+
+.fourGames .line {
+	border-right: 2px solid #00a0e9;
 }
 
 .fourGames img {
@@ -771,13 +806,13 @@ a {
 	height: 195px;
 	border-bottom: 1px solid #00a0e9;
 	color: #fff;
+	padding-top: 15px;
 }
 
 .detailsRight .title h3 {
 	display: block;
 	text-align: center;
-	width: 100px;
-	margin: 15px auto;
+	width: 753px;
 }
 
 .detailsRight .title p {
@@ -897,6 +932,8 @@ a {
 	background-color: #003c5f;
 	background-image: url(../images/register.png);
 	margin-left: 200px;
+	cursor: pointer;
+	outline: none;
 }
 
 #regcaptchas {
@@ -907,6 +944,43 @@ a {
 	width: auto;
 	height: auto;
 	margin-bottom: 50px;
+}
+
+.register input[type = "checkbox"] {
+	margin: 3px 3px 0px 5px;
+	display: none;
+}
+
+.register label {
+	display: inline-block;
+	padding-left: 15px;
+	cursor: pointer;
+	background: url(../images/square.png) no-repeat left center;
+	background-size: 11px 11px;
+	height: 20px;
+	line-height: 20px;
+	width: 120px;
+	margin-bottom: 8px;
+	margin-left: 15px;
+}
+.register label.check {
+	padding-left: 15px;
+	cursor: pointer;
+	background: url(../images/square_dot.png) no-repeat left center;
+	background-size: 11px 11px;
+}
+
+.register .tgyOne {
+	display: none;
+}
+
+.register .tgyTwo {
+	display: none;
+}
+
+.register .tgyShow {
+	display: block;
+	margin-top: 8px;
 }
 
 /***账号充值***/
@@ -979,21 +1053,30 @@ a {
 	text-align: right;
 	width: 65px;
 	margin-right: 15px;
+}
+
+.recharge .specific .stwo {
+	margin-right: 15px;
 	margin-bottom: 15px;
 }
 
 .recharge .specific input,select {
 	background-color: #0b71ae;
 	border: 1px solid #434343;
+	color: #fff;
+	outline: none;
+	padding: 3px;
+}
+
+.recharge .specific .select {
+	margin: -2px;
+	overflow: hidden;
 }
 
 .recharge .specific input {
 	width: 150px;
 }
 
-.recharge .specific .sthree {
-	color: #ffd308;
-}
 
 .recharge .specific .captchas {
 	width: 60px;
@@ -1010,6 +1093,12 @@ a {
 	height: 35px;
 	line-height: 35px;
 	margin-left: 10px;
+}
+
+#captchas {
+	float: left;
+	margin-top: 5px;
+	margin-right: 5px;
 }
 
 .recharge .specific p {
@@ -1066,11 +1155,22 @@ a {
 	color: #fff;
 	font-size: 18px;
 	margin-top: 20px;
+	cursor: pointer;
 }
 
 .recharge .stwo {
 	margin-bottom: 15px;
 }
+
+.recharge tr {
+	line-height: 35px;
+}
+
+.recharge .span {
+	color: #ffd308;
+}
+
+
 
 
 /***游戏下载***/
@@ -1145,4 +1245,47 @@ a {
 .complete .cbright {
 	margin-top: 95px;
 	margin-left: 350px;
+}
+
+
+/***家长监护***/
+.guardian {
+	background-color: #003c5f;
+}
+
+.guardian .gmid .gmleft {
+	width: 300px;
+	height: 300px;
+	float: left;
+	margin-left: 50px;
+	margin-top: 100px;
+}
+
+.guardian .gmid .gmright {
+	color: #fff;
+	padding: 30px;
+	padding-left: 400px;
+	line-height: 32px;
+	font-size: 18px;
+}
+
+.guardian .gmid .gmright p {
+	text-indent: 2em;
+}
+
+.guardian .gbottom {
+	padding: 30px;
+	border-top: 1px solid #00a0e9;
+	color: #fff;
+	font-size: 18px;
+	line-height: 32px;
+}
+
+.guardian .gbottom p {
+	text-indent: 2em;
+}
+
+.guardian .gbottom span {
+	display: block;
+	margin-top: 30px;
 }

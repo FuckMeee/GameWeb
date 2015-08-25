@@ -8,19 +8,6 @@
 	<script type="text/javascript" src="js/fun.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 
-
-
-<script language="javascript">
-  	function agreee(){
-        if(document.getElementById('ragree').checked) {
-       		document.getElementById('submit').disabled='disabled';
-       } else {
-       		document.getElementById('submit').disabled=false;
-       }
-        
-  }
-  </script>
-
 </head>
 <body>
 	<div id="header">
@@ -126,7 +113,7 @@
 								<table>
 									<tr>
 										<td class="sone">账号类型 :</td>
-										<td class="stwo"></td>
+										<td class="stwo">登录名</td>
 										<td></td>
 									</tr>
 									<tr>
@@ -148,23 +135,23 @@
 									</tr>
 									<tr>
 										<td class="sone">充值金额 :</td>
-										<td><select>
+										<td><select class="select">
 											<option value="10">10RMB</option>
 											<option value="20">20RMB</option>
 											<option value="30">30RMB</option>
 											<option value="50">50RMB</option>
 											<option value="100">100RMB</option>
-										</select></td>
-										<td class="sthree">(10RMB=1000尊盟币=100000欢乐豆)</td>
+										</select> <span class="span">(10RMB=1000尊盟币=100000欢乐豆)</span></td>
+										<td class="sthree"></td>
 									</tr>
 									<tr>
 										<td class="sone">验证码 :</td>
-										<td class="stwo"><input type="text" name="captchas" id="captchas"></td>
-									<td><div class="captchas"></div><a href="#" class="captchasword">看不清，换一张</a></td>
+										<td class="stwo"><input type="text" name="captchas" id="captchas"><div class="captchas"></div><a href="#" class="captchasword">看不清，换一张</a></td>
+									<td></td>
 									</tr>
 									<tr>
 										<td></td>
-										<td class="stwo"><input type="checkbox" name="ragree" id="ragree" class="ragree" value="agree"><span name="ragree" class="span1" onclick="agreee()">已阅读并同意《关于充值的特别提示和约定》</span></td>
+										<td class="stwo"><input type="checkbox" name="ragree" id="ragree" class="ragree" value="agree"><span name="ragree" class="span1">已阅读并同意《关于充值的特别提示和约定》</span></td>
 										<td></td>
 									</tr>
 								</table>

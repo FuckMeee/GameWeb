@@ -84,14 +84,7 @@ $(document).ready(function(e) {
     });
 });
 </script>
-<script language="javascript">
-  function agreee(){
-       if(document.getElementById('ragree').checked)
-              document.getElementById('submit').disabled=false;
-    else
-        document.getElementById('submit').disabled='disabled';
-  }
-  </script>
+
 
 </head>
 <body>
@@ -152,16 +145,16 @@ $(document).ready(function(e) {
 								</tr>
 								<tr>
 									<td class="one"><span>* </span>手机号码 :</td>
-									<td><input type="text" name="phone" id="phone" placeholder="请填写真实号码，用于登录验证和密码找回"></td>
+									<td><input type="text" name="phone" id="phone" value="请填写真实号码，用于登录验证和密码找回"></td>
 									<td></td>
 								</tr>
 								<tr>
 									<td class="one"><span>* </span>QQ :</td>
-									<td><input type="text" name="qq" id="qq" placeholder="请填写真实QQ号，没有QQ号可填写123456"></td>
+									<td><input type="text" name="qq" id="qq" value="请填写真实QQ号，没有QQ号可填写123456"></td>
 									<td></td>
 								</tr>
 								<tr>
-									<td class="one"><span>* </span>所在城市 :</td>
+									<td class="one"><span> </span>所在城市 :</td>
 									<td>
 										<select id="pro" name="pro">
 									        <option>请选择省份</option>
@@ -207,11 +200,21 @@ $(document).ready(function(e) {
 									</td>
 									<td></td>
 								</tr>
-								<!-- <tr>
-									<td><span>*</span>推广员</td>
-									<td><input type="text" name="name"></td>
+
+								<tr>
+									<td class="one"><span> </span>推广员 :</td>
+									<td>
+										<p>
+											<input type="checkbox" id="tgy1" name="tgy" class="type">
+											<label name="tgy1" class="tgy1 short" for="tx">填写推广员账号</label>
+											<input type="checkbox" id="tgy2" name="tgy" class="type">
+											<label name="tgy2" class="tgy2 long" for="tx">填写推官员账号</label>
+										</p>
+										<input type="text" name="tgyId1" class="tgyOne">
+										<input type="text" name="tgyId2" class="tgyTwo">
+									</td>
 									<td></td>
-								</tr> -->
+								</tr>
 
 								<tr>
 									<td class="one"><span>* </span>验证码 :</td>
@@ -220,7 +223,7 @@ $(document).ready(function(e) {
 								</tr>
 								<tr class="agree">
 									<td class="one"></td>
-									<td><label></label><input type="checkbox" name="ragree" id="ragree" class="ragree" value="agree"><span name="ragree" class="span1" onclick="agreee()" >我接受993《用户协议》</span></td>
+									<td><input type="checkbox" name="ragree" id="ragree" class="ragree" value="agree"><span name="ragree" class="span1">我接受993《用户协议》</span></td>
 									<td></td>
 								</tr>
 							</table>
