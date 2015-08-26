@@ -19,6 +19,7 @@ a {
 img {
 	border: none;
 }
+
 .h {
 	height: 720px;
 }
@@ -868,6 +869,7 @@ img {
 	border: 1px solid #434343;
 	width: 380px;
 	height: 35px;
+	line-height: 35px;
 	margin-left: 15px;
 	color: #fff;
 	padding: 0 10px;
@@ -877,6 +879,7 @@ img {
 	font-size: 18px;
 	text-align: right;
 	width: 120px;
+	height: 55px;
 }
 
 .register .one span {
@@ -886,7 +889,7 @@ img {
 
 .register table tr {
 	height:1%;
-	margin-bottom: 20px;
+/*	margin-bottom: 20px;*/
 	display: block;
 }
 
